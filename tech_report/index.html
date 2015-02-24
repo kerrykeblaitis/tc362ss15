@@ -27,7 +27,7 @@
 
           <section>
 
-            <h1>Vinted: An Open-Source Wardrobe<h1>
+            <h1>Vinted: An Open-Source Wardrobe</h1>
 
             <p>Online grass-roots wardrobe exchange, <a href="http://www.vinted.com">Vinted</a>, began in Lithuania in 2008 and has since grown to over 7 million users worldwide.
               With over 25 million listed items available to search and 80 terabytes dedicated to image storage,
@@ -37,6 +37,76 @@
               exploiting the opportunity to create more meaningful user experience and ultimately increase customer retention[<a href="#source_2">2</a>].
             </p>
 
+            <p>
+              Vinted’s main app is built on Ruby and Rails, with Ruby running services and scripts and internal apps riding on Rails.
+              Optimized for high-availability, Vinted utilizes Unicorn,
+              a rack interface designed solely for “clients that can make full use of the network bandwidth available to the server”[<a href="#source_3">3</a>], praised for its stability, reliability and speed.
+              Each individual country using Vinted has it’s own portal and database, avoiding the difficulties of MySQL sharding.
+              <a href="http://www.percona.com/about-percona">Percona<a> offers a tool kit allowing programmers to edit database structures and update these changes live, allowing for data migration and site deployment without downtime.
+            </p>
+
+            <p>
+              Vinted runs over 220 bare metal servers, hosting traffic from eight countries worldwide in three data centers in both Europe and the United States.
+              Vinted receives 200 million requests per day. A significant portion of Vinted’s server space is dedicated to collecting and analyzing MySQL changes and website event data for tracking measurements.
+              Every piece of data is valuable to this team— test logs, error logs, deployment details, HTTP response times.
+              Tomas Varaneckas of Vinted believes, ”You cannot improve what you cannot measure.”
+              <a href="http://sphinxsearch.com/">Sphinx</a> is an open source server tailored specifically to searching databases[<a href="#source_5">5</a>].
+              Vinted uses this service to relieve MySQL of a heavy data load. The following is a breakdown of Vinted servers[<a href="#source_1">1</a>]:
+            </p>
+
+            <div id="server_list">
+              <ul>
+                <li>47 for internal tools</li>
+                <li>38 for the Hadoop ecosystem</li>
+                <li>34 for image processing and storage</li>
+                <li>30 for Unicorn and microservices</li>
+                <li>28 for MySQL databases, including replicas</li>
+                <li>19 for the Sphinx search</li>
+                <li>10 for resque background jobs</li>
+                <li>10 for load balancing with Nginx</li>
+                <li>6 for Kafka</li>
+                <li>4 for Redis</li>
+                <li>4 for email delivery</li>
+              </ul>
+            </div>
+
+            <p>
+              The Vinted team deploys the app hundreds of times a day using <a href="http://jenkins-ci.org/">Jenkins</a>,
+              running over 7000 tests in about three minutes, ultimately contributing to the stability of the site.
+              “Jenkins runs on a bare metal machine with 32 CPU, 128G RAM and SSD drives”[<a href="#source_1">1</a>].
+              <a href="https://www.chef.io/">Chef</a> is used for most of the provisioning, allowing the app to run mostly on automation.
+              Vinted staff rely on <a href="https://github.com/">GitHub</a> for nearly everything, “including to discuss company issues”[<a href="#source_1">1</a>].
+              Developers work on a master branch and all changes are uploaded as a pull request on GitHub.
+              Using <a href="">Pronto</a>, pull requests become updated with a status where other developers review and make changes.
+              Pull requests are typically small and “may be updated multiple times with various fixes”[<a href="#source_1">1</a>].
+              All updates are tested with Jenkins and accepted pull requests are merged into the master.
+            </p>
+
+            <p>
+              A team of five site reliability engineers “maintain all infrastructure— everything from server bootstrapping to database administration”[<a href="#source_1">1</a>].
+              Vinted relies heavily on automation in order to deploy nearly 300 times a day, but a deployment will not occur if testing fails.
+              Errors are streamed to <a href="">graylog</a>, an open source log management platform.
+              Error alarms, failed deployment notifications and “Fatal” errors are automatically posted to a <a href="">Slack</a> chat.
+              The error logs contain additional metadata allowing for streamlined troubleshooting.
+              Vinted utilizes <a href="">Capistrano</a>, “an open source tool for running scripts on multiple servers”[<a href="#source_4">4</a>], primarily used for deploying web applications.
+              Automatic deployments only run during Vinted business hours although developers may “force” a locked deployment through Slack chat if necessary.
+            </p>
+
+            <p>
+              In response to a reader comment asking if the team was overwhelmed by the company “ramping up its technology stack on so many fronts”,
+              Bendžiūnas says, “At the beginning there was only one developer (CEO, co-founder) and the technology stack was a lot smaller.
+              The answer to your question is, ’NO’.”
+            </p>
+
+            <p>
+              He continues, “ When the project began to grow… we hired more developers, more engineers.
+              We were solving problems as we encountered them along the way.
+              We still have problems we’re solving. This is how new technologies appear.”
+            </p>
+
+            <p>
+              Having earned in 2014 the record largest amount of funds in a Series B investment round and having partnered with Facebook’s mobile-ad network in April [<a href="#source_6">6</a>],
+              he Vinted team will be modeling their stack, one tiny pull request at a time.
 
           </section>
 
@@ -48,31 +118,37 @@
                 <a id="source_1" href="http://highscalability.com/blog/2015/2/9/vinted-architecture-keeping-a-busy-portal-stable-by-deployin.html">
                   http://highscalability.com/blog/2015/2/9/vinted-architecture-keeping-a-busy-portal-stable-by-deployin.html
                 </a>
-              <li>
+              </li>
               <li class="source_title">
                 <p>Euro Secondhand Marketplace Vinted Raises $27M To Take On The Salvation Army, <p>
                 <a id="source_2" href="http://highscalability.com/blog/2015/2/9/vinted-architecture-keeping-a-busy-portal-stable-by-deployin.html">
                   http://techcrunch.com/2014/01/31/euro-secondhand-marketplace-vinted-raises-27m-to-take-on-the-salvation-army/
                 </a>
-              <li>
+              </li>
               <li class="source_title">
                 <p>Everything you need to know about Unicorn,<p>
                 <a id="source_3" href="https://blog.engineyard.com/2010/everything-you-need-to-know-about-unicornl">
                   https://blog.engineyard.com/2010/everything-you-need-to-know-about-unicorn
                 </a>
-              <li>
+              </li>
               <li class="source_title">
-                <p>Capistrano (software),<p>
+                <p>Wikipedia: Capistrano (software),<p>
                 <a id="source_4" href="http://en.wikipedia.org/wiki/Capistrano_%28software%29">
                   http://en.wikipedia.org/wiki/Capistrano_%28software%29
                 </a>
-              <li>
+              </li>
               <li class="source_title">
                 <p>About Sphinx Technologies Inc.,<p>
                 <a id="source_5" href="http://sphinxsearch.com/about/company/">
                   http://sphinxsearch.com/about/company/
                 </a>
-              <li>
+              </li>
+              <li class="source_title">
+                <p>Wikipedia: Vinted<p>
+                <a id="source_6" href="http://en.wikipedia.org/wiki/Vinted">
+                  http://en.wikipedia.org/wiki/Vinted
+                </a>
+              </li>
             </ol>
 
           </section>
