@@ -1,0 +1,38 @@
+Vinted: An Open-Source Wardrobe
+
+	Online grass-roots wardrobe exchange, Vinted, began in Lithuania in 2008 and has since grown to over 7 million users worldwide. With over 25 million listed items available to search and 80 terabytes dedicated to image storage, nearly 2.5 million active members average over 3 hours a week on the marketplace and social media app[1]. Nerijus Bendžiūnas and Tomas Varaneckas stress the importance of developing a site from mobile and having high regard for API design in the early stages. In 2013 Vinted development changed focus to mobile after raising funds from Series A investors, exploiting the opportunity to create more meaningful user experience and ultimately increase customer retention[2]. 
+	Vinted’s main app is built on Ruby and Rails, with Ruby running services and scripts and internal apps riding on Rails. Optimized for high-availability, Vinted utilizes Unicorn, a rack interface designed solely for “clients that can make full use of the network bandwidth available to the server”[3], praised for its stability, reliability and speed. Each individual country using Vinted has it’s own portal and database, avoiding the difficulties of MySQL sharding. Percona offers a tool kit allowing programmers to edit database structures and update these changes live, allowing for data migration and site deployment without downtime. 
+	 
+
+	•	47 for internal tools
+	•	38 for the Hadoop ecosystem
+	•	34 for image processing and storage
+	•	30 for Unicorn and microservices
+	•	28 for MySQL databases, including replicas
+	•	19 for the Sphinx search
+	•	10 for resque background jobs
+	•	10 for load balancing with Nginx
+	•	6 for Kafka
+	•	4 for Redis
+	•	4 for email delivery
+
+	The Vinted team deploys the app hundreds of times a day using Jenkins, running over 7000 tests in about three minutes, ultimately contributing to the stability of the site. “Jenkins runs on a bare metal machine with 32 CPU, 128G RAM and SSD drives”[1]. Chef is used for most of the provisioning, allowing the app to run mostly on automation. Vinted staff rely on GitHub for nearly everything, “including to discuss company issues”[1]. Developers work on a master branch and all changes are uploaded as a pull request on GitHub. Using Pronto, pull requests become updated with a status where other developers review and make changes. Pull requests are typically small and “may be updated multiple times with various fixes”[1]. All updates are tested with Jenkins and accepted pull requests are merged into the master. 
+	A team of five site reliability engineers “maintain all infrastructure— everything from server bootstrapping to database administration”[1]. Vinted relies heavily on automation in order to deploy nearly 300 times a day, but a deployment will not occur if testing fails. Errors are streamed to graylog, an open source log management platform. Error alarms, failed deployment notifications and “Fatal” errors are automatically posted to a Slack chat. The error logs contain additional metadata allowing for streamlined troubleshooting. Vinted utilizes Capistrano, “an open source tool for running scripts on multiple servers”[4], primarily used for deploying web applications. Automatic deployments only run during Vinted business hours although developers may “force” a locked deployment through Slack chat if necessary. 
+	In response to a reader comment asking if the team was overwhelmed by the company “ramping up its technology stack on so many fronts”, Bendžiūnas says, “At the beginning there was only one developer (CEO, co-founder) and the technology stack was a lot smaller. The answer to your question is, ’NO’.”
+	He continues, “ When the project began to grow… we hired more developers, more engineers. We were solving problems as we encountered them along the way. We still have problems we’re solving. This is how new technologies appear.” 
+	Having earned in 2014 the record largest amount of funds in a Series B investment round and having partnered with Facebook’s mobile-ad network in April, the Vinted team will be modeling their stack, one tiny pull request at a time. 
+
+
+Sources
+	1.	Vinted Architecture: Keeping a Busy Portal Stable By Deploying Several Hundred Times Per Day, http://highscalability.com/blog/2015/2/9/vinted-architecture-keeping-a-busy-portal-stable-by-deployin.html  
+	2.	Euro Secondhand Marketplace Vinted Raises $27M To Take On The Salvation Army,  http://techcrunch.com/2014/01/31/euro-secondhand-marketplace-vinted-raises-27m-to-take-on-the-salvation-army/  
+	3.	Everything you need to know about Unicorn, https://blog.engineyard.com/2010/everything-you-need-to-know-about-unicorn  
+	4.	Wikipedia: Capistrano (software), http://en.wikipedia.org/wiki/Capistrano_%28software%29  
+	5.	About Sphinx Technologies Inc., http://sphinxsearch.com/about/company/  
+	6.	Wikipedia: Vinted http://en.wikipedia.org/wiki/Vinted  
+
+	
+	
+
+	
+
