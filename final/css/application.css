@@ -1,0 +1,363 @@
+/*$font: ;*/
+/* line 21, ../scss/components/_header.scss */
+header h1 {
+  display: inline;
+}
+/* line 24, ../scss/components/_header.scss */
+header h2 {
+  color: #000;
+  font-family: Georgia, serif;
+  font-size: 1.5em;
+  margin-left: -10px;
+}
+/* line 31, ../scss/components/_header.scss */
+header p {
+  display: block;
+}
+/* line 34, ../scss/components/_header.scss */
+header img {
+  opacity: .55;
+  margin-top: -5px;
+}
+/* line 38, ../scss/components/_header.scss */
+header span {
+  font-weight: 100;
+}
+
+/* line 44, ../scss/components/_header.scss */
+.navigation ol {
+  list-style: none;
+}
+/* line 47, ../scss/components/_header.scss */
+.navigation h3 {
+  float: right;
+  font-size: 1.5em;
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 10px;
+}
+
+/* line 56, ../scss/components/_header.scss */
+.search {
+  display: block;
+}
+/* line 58, ../scss/components/_header.scss */
+.search li {
+  float: left;
+}
+/* line 61, ../scss/components/_header.scss */
+.search form {
+  float: left;
+  margin-top: 1.1em;
+}
+/* line 65, ../scss/components/_header.scss */
+.search legend {
+  font-family: Helvetica, Arial, sans-serif;
+  float: left;
+}
+/* line 69, ../scss/components/_header.scss */
+.search a {
+  float: left;
+  margin-left: .4em;
+  margin-top: .7em;
+}
+
+/* line 76, ../scss/components/_header.scss */
+#header-titles {
+  width: 700px;
+  float: left;
+  padding: 1%;
+  margin-top: -80px;
+}
+
+/* line 83, ../scss/components/_header.scss */
+#call-to-action {
+  width: 260px;
+  float: left;
+  padding-top: 1%;
+  text-align: left;
+}
+/* line 88, ../scss/components/_header.scss */
+#call-to-action ul {
+  float: left;
+  width: 100%;
+}
+/* line 94, ../scss/components/_header.scss */
+#call-to-action a {
+  float: right;
+  margin-right: 35px;
+}
+
+/* line 2, ../scss/components/_listings.scss */
+#large-image {
+  width: 100%;
+}
+
+/* line 6, ../scss/components/_listings.scss */
+.listings {
+  display: block;
+}
+/* line 8, ../scss/components/_listings.scss */
+.listings h3 {
+  font-size: 2.5em;
+  line-height: .95;
+}
+/* line 12, ../scss/components/_listings.scss */
+.listings h4 {
+  font-size: 1.7em;
+  line-height: .25;
+  font-weight: 100;
+}
+/* line 17, ../scss/components/_listings.scss */
+.listings h5 {
+  font-size: 1.5em;
+  display: inline;
+}
+/* line 21, ../scss/components/_listings.scss */
+.listings ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+/* line 26, ../scss/components/_listings.scss */
+.listings li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 34, ../scss/components/_listings.scss */
+.media-grid {
+  width: 960px;
+}
+/* line 36, ../scss/components/_listings.scss */
+.media-grid ul {
+  list-style-type: none;
+  padding: 0;
+}
+/* line 40, ../scss/components/_listings.scss */
+.media-grid img {
+  float: left;
+  width: 25%;
+}
+
+/* line 46, ../scss/components/_listings.scss */
+#listing-details {
+  margin: 20px 0;
+}
+/* line 48, ../scss/components/_listings.scss */
+#listing-details li {
+  display: block;
+}
+/* line 51, ../scss/components/_listings.scss */
+#listing-details p {
+  font-size: 1.5em;
+}
+/* line 54, ../scss/components/_listings.scss */
+#listing-details ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+/* line 59, ../scss/components/_listings.scss */
+#listing-details li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 67, ../scss/components/_listings.scss */
+#mls-copy p {
+  width: 55%;
+  float: left;
+}
+
+/* line 74, ../scss/components/_listings.scss */
+#listing-updates img {
+  width: 40%;
+}
+/* line 77, ../scss/components/_listings.scss */
+#listing-updates a {
+  float: right;
+}
+
+/* line 1, ../scss/components/_about.scss */
+.about {
+  margin-top: 20px;
+}
+/* line 3, ../scss/components/_about.scss */
+.about p {
+  font-size: 1.5em;
+}
+/* line 6, ../scss/components/_about.scss */
+.about img {
+  width: 60%;
+  float: left;
+  margin-right: 20px;
+}
+
+/* line 13, ../scss/components/_about.scss */
+.social-icons {
+  display: inline;
+  float: right;
+  width: 600px;
+}
+/* line 17, ../scss/components/_about.scss */
+.social-icons ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+/* line 22, ../scss/components/_about.scss */
+.social-icons li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 29, ../scss/components/_about.scss */
+.contacts {
+  display: inline;
+  float: left;
+}
+/* line 32, ../scss/components/_about.scss */
+.contacts p {
+  font-size: 1.5em;
+}
+
+/* line 39, ../scss/components/_about.scss */
+.icon-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+/* line 43, ../scss/components/_about.scss */
+.icon-list img {
+  float: left;
+}
+
+@media screen and (max-width: 959px) {
+  /* line 2, ../scss/components/_mobile.scss */
+  #container {
+    width: 100%;
+  }
+
+  /* line 5, ../scss/components/_mobile.scss */
+  #header-titles {
+    width: 70%;
+  }
+
+  /* line 8, ../scss/components/_mobile.scss */
+  #call-to-action {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 640px) {
+  /* line 17, ../scss/components/_mobile.scss */
+  #header-titles {
+    width: 100%;
+  }
+
+  /* line 20, ../scss/components/_mobile.scss */
+  #call-to-action {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 320px) {
+  /* line 37, ../scss/components/_mobile.scss */
+  img {
+    width: 100%;
+  }
+
+  /* line 40, ../scss/components/_mobile.scss */
+  #container {
+    width: 320px;
+  }
+}
+/* line 21, ../scss/application.scss */
+body {
+  color: #000;
+  background-color: #fefdfb;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  font: 100%/1.5 Georgia, serif;
+  background: white;
+  margin: 0 auto;
+}
+
+/* line 31, ../scss/application.scss */
+h1 {
+  color: #000;
+  font-family: "Franklin Gothic Heavy", "Arial Black", sans-serif;
+  font-size: 2.90em;
+  /* 38px */
+}
+
+/* line 37, ../scss/application.scss */
+h2, h3, h4, h5 {
+  color: #000;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1em;
+}
+
+/* line 43, ../scss/application.scss */
+a {
+  color: #000;
+}
+/* line 45, ../scss/application.scss */
+a i {
+  color: black;
+}
+
+/* line 50, ../scss/application.scss */
+a:hover {
+  color: blue;
+}
+
+/* line 54, ../scss/application.scss */
+a:visited {
+  color: gray;
+}
+
+/* line 58, ../scss/application.scss */
+img {
+  width: 100%;
+}
+
+/* line 62, ../scss/application.scss */
+ul {
+  list-style: none;
+}
+
+/* line 66, ../scss/application.scss */
+.wrap {
+  width: 100%;
+}
+
+/* line 70, ../scss/application.scss */
+.button {
+  font-size: 1.5em;
+  /*16pt*/
+  line-height: 1.5;
+  border: 1px solid black;
+  height: 100%;
+  border-radius: 150px;
+  padding: .5em;
+  background-color: #bdc3c7;
+  box-shadow: 0 0 9px rgba(0, 0, 0, 0.3);
+}
+
+/* line 81, ../scss/application.scss */
+#container {
+  width: 960px;
+  margin: 0px auto;
+}
+
+/* line 89, ../scss/application.scss */
+#header-titles {
+  width: 700px;
+  float: left;
+}
+
+/* line 94, ../scss/application.scss */
+#call-to-action {
+  width: 260px;
+  float: right;
+}

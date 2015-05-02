@@ -1,0 +1,97 @@
+@import "components/_header";
+@import "components/_listings";
+@import "components/_blog";
+@import "components/_about";
+@import "components/_mobile";
+
+//Colors
+$eggshell: #fefdfb;
+$blue: #2980b9;
+
+//Opacity
+$light: .25;
+$mid: .5;
+$dark: .75;
+
+//Font Weight
+$heavy: "Franklin Gothic Heavy", "Arial Black", sans-serif;
+$sanserif: Helvetica, Arial, sans-serif;
+$serif: Georgia, serif;
+
+body{
+  color: #000;
+  background-color: $eggshell;
+  box-shadow: 0 0 15px rgba(0,0,0,.5);
+  font: 100%/1.5 Georgia, serif;
+  background: white;
+  margin: 0 auto;
+}
+
+
+h1 {
+  color: #000;
+  font-family: $heavy;
+  font-size: 2.90em; /* 38px */
+}
+
+h2, h3, h4, h5 {
+  color: #000;
+  font-family: $sanserif;
+  font-size: 1em;
+}
+
+a {
+  color: #000;
+  i {
+    color: black;
+  }
+}
+
+a:hover {
+  color: blue;
+}
+
+a:visited {
+  color: gray;
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+.wrap {
+  width: 100%;
+}
+
+.button {
+  font-size: 1.5em; /*16pt*/
+  line-height: 1.5;
+  border: 1px solid black;
+  height: 100%;
+  border-radius: 150px;
+  padding: .5em;
+  background-color: $light-gray;
+  box-shadow: 0 0 9px rgba(0,0,0,.3);
+}
+
+#container {
+  width: 960px;
+  //height: 100%;
+  //background: gray;
+  //box-shadow: 0 0 15px rgba(0,0,0,.2);
+  margin: 0px auto;
+}
+
+#header-titles {
+  width: 700px;
+  float: left;
+}
+
+#call-to-action {
+  width: 260px;
+  float: right;
+}
