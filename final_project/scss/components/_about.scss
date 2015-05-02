@@ -1,0 +1,46 @@
+.about {
+  margin-top: 20px;
+  p {
+    font-size: 1.5em;
+  }
+  img {
+    width: 60%;
+    float: left;
+    margin-right: 20px;
+  }
+}
+
+.social-icons {
+  display: inline;
+  float: right;
+  width: 600px;
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.contacts {
+  display: inline;
+  float: left;
+  p {
+    font-size: 1.5em;
+  }
+}
+
+
+.icon-list {
+  ul {
+    list-style-type: none;
+    padding: 0;
+    }
+  img {
+    float: left;
+  }
+}
